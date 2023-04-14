@@ -9,15 +9,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Objects;
-import java.util.Scanner;
 
 public class Parser {
-    private static String getTown() {
-        var townScan = new Scanner(System.in);
-        System.out.println("Введите название города: ");
-        return townScan.nextLine();
-    }
-
     private static Document getPage(String town) throws IOException {
         String url = "https://www.gismeteo.ru/catalog/russia/";
         Element catalog = Jsoup.parse(new URL(url), 3000).selectFirst("div[class=popular-cities]");
