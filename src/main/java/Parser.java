@@ -49,7 +49,7 @@ public class Parser {
         }
         System.out.printf("%1$10s%2$30s%3$24s%4$12s\n", "Дата", "Облачность, осадки", "Температура (min-max)", "Ветер");
         for (int i = 0; i < 7; i++) {
-            System.out.printf("%1$6s, %2$2s %3$29s %4$12s°C - %5$4s°C %6$8s м/с\n", dates.get(i).text(), days.get(i).text(),
+            System.out.printf("%1$6s, %2$2s %3$29s %4$12s°C - %5$3s°C %6$8s м/с\n", dates.get(i).text(), days.get(i).text(),
                     sk.get(i),  temp.get(2 * i + 2).text(), temp.get(2 * i + 1).text(), windList.get(i));
         }
     }
